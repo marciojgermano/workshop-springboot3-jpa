@@ -20,11 +20,11 @@ import com.educandoweb.curso.repositories.OrderRepository;
 import com.educandoweb.curso.repositories.ProductRepository;
 import com.educandoweb.curso.repositories.UserRepository;
 
-@Configuration
-@Profile("test")
+@Configuration //Indica que é uma classe de configuração
+@Profile("test")// Configuração especifica para o perfil de teste
 public class TestConfig implements CommandLineRunner{
 	
-	@Autowired
+	@Autowired //Resolve injeção de dependência
 	private UserRepository userRepository;
 	
 	@Autowired

@@ -19,7 +19,7 @@ public class OrderResource {
 	@Autowired
 	private OrderService service;
 
-	@GetMapping
+	@GetMapping //Responde a requisição do tipo GET
 	public ResponseEntity<List<Order>> findAll() {
 		List<Order> list = service.findAll();
 		return ResponseEntity.ok().body(list);

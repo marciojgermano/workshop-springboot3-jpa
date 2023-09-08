@@ -18,13 +18,13 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
-@Entity
-@Table(name = "tb-order")
+@Entity //converte objeto para o modelo relacional
+@Table(name = "tb-order") //Especifica o nome da tabela do banco de dados
 public class Order implements Serializable{
     private static final long serialVersionUID = 1L;
     
-    @Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id //Especifica a chave primaria
+	@GeneratedValue(strategy = GenerationType.IDENTITY) //Gera id com incremento automático
 	private Long id;
     
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'", timezone = "GMT")
